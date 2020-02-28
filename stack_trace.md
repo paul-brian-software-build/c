@@ -1,6 +1,7 @@
 
 ##Stack Trace edit_wiki_cmd
 
+[]{#topic1}
 From [gcc Version 7.3.0 manual]{.caps}:
 ```` {.man .numberLines}
 '-fomit-frame-pointer'
@@ -23,6 +24,7 @@ The [stack-frame-pointer]{.italic} is a life-saver when chasing after elusive bu
 
 Be it, recursive functions or unexpected jumps, dumping the stack frame, helps to visualize, as well as profile the weakest links in your program.
 
+[]{#topic2}
 A very simple example, is tracing file redirection in `sh`{.sh}.
 
 ```` {.sh .numberLines}
@@ -59,6 +61,7 @@ And we can confirm, that [40ec61]{.italic} is the next instruction on the `redir
   40ec61:	83 f8 ff             	cmp    $0xffffffff,%eax
 ````
 
+[]{#topic3}
 For a more useful example, we demonstrate one of the many pitfalls in [posix]{.italic} shells:
 
 ```` {.sh .numberLines}
@@ -80,6 +83,7 @@ var is:
 
 The striking similiarity between sub-shells and pipes, is evident.
 
+[]{#topic4}
 Let see the respective dumps of the processes envolved, where each dump is headed by each process id, [pid]{.italic}.
 
 We shell explore the similarity between sub-shells and pipes:

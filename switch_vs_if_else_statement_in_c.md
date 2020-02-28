@@ -1,5 +1,6 @@
 ##Switch vs if-else conditionals in C edit_wiki_cmd
 
+[]{#topic1}
 From [ansi c 3.6.4.2 "The switch statement"]{.caps}
 
 > ["The controlling expression of a switch statement shall have integral type.  The expression of each case label shall be an [integral constant expression]{.bold}.  No two of the case constant expressions in the same switch statement shall have the same value after conversion.  There may be at most one default label in a switch statement.  (Any enclosed switch statement may have a default label or case constant expressions with values that duplicate case constant expressions in the enclosing switch statement.)"]{.caps}
@@ -8,6 +9,7 @@ From [ansi c 3.6.4.2 "The switch statement"]{.caps}
 While very limiting, the restriction on constant type expression in `case`{.c} labels for the `switch`{.c} statements in C, guarantees a huge performance boost for the compiled program.
 
 
+[]{#topic2}
 The following if-else statement:
 
 ```` {.c .numberLines}
@@ -66,6 +68,7 @@ Quite a tedious branching decision where the cmp [opcode]{.italic} had to be rep
 ````
 
 --------------------
+[]{#topic3}
 
 Enter the elegance and efficiency of the `switch`{.c} statement:
 
@@ -113,6 +116,7 @@ There is one and only [instruction]{.italic} that is shared by [all]{.bold} case
 
 Meaning, that no matter how convoluted and how many conditionals checking your `switch`{.c} statements accounts for, it will all compile down to a shared, [one single]{.bold} [instruction]{.italic} that accounts for all the different `case`{.c} labels.
 
+[]{#topic4}
 So, we investigate:
 
 We have:

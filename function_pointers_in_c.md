@@ -1,7 +1,7 @@
 ##Function pointers in c edit_wiki_cmd
 
 Function pointers are very useful for [generic programming]{.italic} in c.
-
+[]{#topic1}
 A typical example is the qsort() prototype in libc:
 
 ```` {.c .numberLines}
@@ -16,6 +16,7 @@ typedef int (*__compar_fn_t) (const void *, const void *);
 
 By providing a callback function `__compar_fn_t`{.c} to the `qsort()`{.c} function, you can pass in any data structure you can imagine, be it a [scalar]{.italic} or an [aggregate]{.italic} type, specifying its size and the number of elements and have it sorted.
 
+[]{#topic2}
 Another example is the revolutionary unix convention that [everything is a file]{.italic}, that allows you to `read()`{.c} , `write()`{.c} etc. to and from a [regular]{.italic} file as well as a [pipe]{.italic} or a [socket]{.italic} and so on, by allowing any file-system that implements that following (and more) file-pointers to assume the functionality of a "normal" file-system.
 
 From [include/linux/fs.h]{.bold}:
@@ -62,6 +63,8 @@ struct file_operations {
 			u64);
 } __randomize_layout;
 ````
+
+[]{#topic3}
 One of the pitfalls of a function-pointers is the very important distinction between the [fucntion]{.italic} itself and its [pointer]{.italic}
 
 There is a major difference between:
@@ -76,6 +79,7 @@ and:
 typedef int (*main_p)(int argc, char **argv);
 ````
 
+[]{#topic4}
 Let's take for example, the following 2 files.
 
 We will compile [main.c]{.italic} and [func.c]{.italic}, where `main()`{.c} will call `g()`{.c} defined in [func.c]{.italic} and declared in [main.c]{.italic}.
@@ -196,6 +200,7 @@ No longer is it a relative offset to g, but it is an indirect absolute address a
 
 Which is exactly the definition a pointer function.
 
+[]{#topic5}
 The same logic applies to array pointers, in the following concepts
 
 + array pointers, i.e. a pointer to an array
@@ -241,6 +246,7 @@ main.c: error: invalid initializer
                  ^~~~~
 ````
 
+[]{#topic6}
 A more intricate example from [ansi c (3.5.4.3 "Function declarators")]{.caps}:
 
 |         `int (*fpfi(int (*)(long), int))(int, ...);`{.c}
