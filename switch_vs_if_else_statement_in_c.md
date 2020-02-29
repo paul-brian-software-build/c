@@ -1,6 +1,7 @@
 ##Switch vs if-else conditionals in C edit_wiki_cmd
 
 []{#topic1}
+
 From [ansi c 3.6.4.2 "The switch statement"]{.caps}
 
 > ["The controlling expression of a switch statement shall have integral type.  The expression of each case label shall be an [integral constant expression]{.bold}.  No two of the case constant expressions in the same switch statement shall have the same value after conversion.  There may be at most one default label in a switch statement.  (Any enclosed switch statement may have a default label or case constant expressions with values that duplicate case constant expressions in the enclosing switch statement.)"]{.caps}
