@@ -1,4 +1,5 @@
-##Table of Contents edit_wiki_cmd
+edit_wiki_cmd
+#Table of Contents
 
 * [Switch vs if else statements in c](switch_vs_if_else_statement_in_c.html){.menu}
     #) [The elegance and efficiency of switch statements](switch_vs_if_else_statement_in_c.html#topic1){.menu}

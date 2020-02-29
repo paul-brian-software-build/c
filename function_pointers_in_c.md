@@ -1,4 +1,5 @@
-##Function pointers in c edit_wiki_cmd
+edit_wiki_cmd
+#Function pointers in c
 
 Function pointers are very useful for [generic programming]{.italic} in c.
 []{#topic1}

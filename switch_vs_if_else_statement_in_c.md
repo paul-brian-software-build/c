@@ -1,4 +1,5 @@
-##Switch vs if-else conditionals in C edit_wiki_cmd
+edit_wiki_cmd
+#Switch vs if-else conditionals in C
 
 []{#topic1}
 

@@ -1,5 +1,6 @@
 
-##Stack Trace edit_wiki_cmd
+edit_wiki_cmd
+#Stack Trace
 
 []{#topic1}
 From [gcc Version 7.3.0 manual]{.caps}:
